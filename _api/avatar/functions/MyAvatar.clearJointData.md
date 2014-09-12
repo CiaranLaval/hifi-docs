@@ -13,7 +13,7 @@ tags: functions
 Take a look at the `crazylegs.js` script. 
 
 First, joints are wildly manipulated:
-
+>
 ```
 var FREQUENCY = 5.0;
 var AMPLITUDE = 45.0;
@@ -38,7 +38,7 @@ Script.update.connect(function(deltaTime) {
 ```
 
 Upon the conclusion of the script, the affected joint data is cleared, returning the MyAvatar to the default standing position: 
-
+>
 ```
 Script.scriptEnding.connect(function() {
     MyAvatar.clearJointData("RightUpLeg");
