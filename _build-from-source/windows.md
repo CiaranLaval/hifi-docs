@@ -30,7 +30,7 @@ Create a build directory in the root of your checkout and then run the CMake bui
     cmake ..
 
 ===
-#####Visual Studio
+#### Visual Studio
 
 Currently building on Windows has been tested using the following compilers:
 * Visual Studio C++ 2010 Express
@@ -38,16 +38,16 @@ Currently building on Windows has been tested using the following compilers:
 
 (If anyone can test using Visual Studio 2013 Express then please update this document)
 
-#####Windows SDK 7.1
+#### Windows SDK 7.1
 
 Whichever version of Visual Studio you use, you will need [Microsoft Windows SDK for Windows 7 and .NET Framework 4](http://www.microsoft.com/en-us/download/details.aspx?id=8279).
 
 NOTE: If using Visual Studio C++ 2010 Express, you need to follow a specific install order. See below before installing the Windows SDK.
 
-#####Windows 8.1
+#### Windows 8.1
 You may have already downloaded the Windows 8 SDK (e.g. if you have previously installed Visual Studio 2013).  If so, change CMAKE_PREFIX_PATH in %HIFI_DIR%\CMakeLists.txt to point to the Windows 8 SDK binaries. The default path is `C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86`
 
-#####Visual Studio C++ 2010 Express
+#### Visual Studio C++ 2010 Express
 
 Visual Studio C++ 2010 Express can be downloaded [here](http://www.visualstudio.com/en-us/downloads#d-2010-express).
 
@@ -65,7 +65,7 @@ If you get an error while installing the VS2010 SP1 Compiler update saying that 
 
 Some of the build instructions will ask you to start a Visual Studio Command Prompt. You should have a shortcut in your Start menu called "Open Visual Studio Command Prompt (2010)" which will do so.
 
-#####Visual Studio 2013
+#### Visual Studio 2013
 
 This product must be purchased separately.
 
@@ -75,7 +75,7 @@ Visual Studio 2013 doesn't have a shortcut to start a Visual Studio Command Prom
 
 If you experience issues building interface on Visual Studio 2013, try generating the build files with Visual Studio 2010 instead. To do so, download Visual Studio 2010 and run `cmake .. -G "Visual Studio 10"` (Assuming running from %HIFI_DIR%\build).
 
-####Qt
+#### Qt
 You can use the online installer or the offline installer. If you use the offline installer, be sure to select the "OpenGL" version.
 
 NOTE: Qt does not support 64-bit builds on Windows 7, so you must use the 32-bit version of libraries for interface.exe to run. The 32-bit version of the static library is the one linked by our CMake find modules.
@@ -90,7 +90,7 @@ Once Qt is installed, you need to manually configure the following:
 * Make sure the Qt runtime DLLs are loadable. You must do this before you attempt to build because some tools for the build depend on Qt. E.g., add to the PATH: `Qt\5.2.0\msvc2010_opengl\bin\`. 
 * Set the QT_CMAKE_PREFIX_PATH environment variable to your `Qt\5.2.0\msvc2010_opengl` directory.
 
-####External Libraries
+#### External Libraries
 
 CMake will need to know where the headers and libraries for required external dependencies are. 
 
@@ -182,10 +182,10 @@ If you're using Visual Studio 2013 then pass "Visual Studio 12" instead of "Visu
 
 Open %HIFI_DIR%\build\hifi.sln and compile.
 
-####Running Interface
+#### Running Interface
 If you need to debug Interface, you can run interface from within Visual Studio (see the section below). You can also run Interface by launching it from command line or File Explorer from %HIFI_DIR%\build\interface\Debug\interface.exe
 
-####Debugging Interface
+#### Debugging Interface
 * In the Solution Explorer, right click interface and click Set as StartUp Project
 * Set the "Working Directory" for the Interface debugging sessions to the Debug output directory so that your application can load resources. Do this: right click interface and click Properties, choose Debugging from Configuration Properties, set Working Directory to .\Debug
 * Now you can run and debug interface through Visual Studio
@@ -193,7 +193,7 @@ If you need to debug Interface, you can run interface from within Visual Studio 
 Optional Components
 ===
 
-####QXmpp
+#### QXmpp
 
 You can find QXmpp [here](https://github.com/qxmpp-project/qxmpp). The inclusion of the QXmpp enables text chat in the Interface client.
 
